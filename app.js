@@ -21,7 +21,11 @@ var commentRoutes   = require("./routes/comments"),
     indexRoutes     = require("./routes/index")
 
 
-mongoose.connect("mongodb://localhost/rf_travel", {useNewUrlParser: true});
+// mongoose.connect("mongodb://localhost/rf_travel", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://raul123:raulkristjan123456789@rftravel-nv7ku.mongodb.net/test?retryWrites=true", {useNewUrlParser: true});
+
+
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
