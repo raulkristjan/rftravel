@@ -21,8 +21,10 @@ var commentRoutes   = require("./routes/comments"),
     indexRoutes     = require("./routes/index")
 
 
-// mongoose.connect("mongodb://localhost/rf_travel", {useNewUrlParser: true});
-mongoose.connect("mongodb+srv://raul123:raulkristjan123456789@rftravel-nv7ku.mongodb.net/test?retryWrites=true", {useNewUrlParser: true});
+
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
+//mongoose.connect("mongodb://localhost/rf_travel", {useNewUrlParser: true});
+//mongoose.connect("mongodb+srv://raul123:raulkristjan123456789@rftravel-nv7ku.mongodb.net/test?retryWrites=true", {useNewUrlParser: true});
 
 
 
