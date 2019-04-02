@@ -21,8 +21,8 @@ var commentRoutes   = require("./routes/comments"),
     indexRoutes     = require("./routes/index")
 
 
-
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
+var url = process.env.DATABASEURL || "mongodb://localhost/rf_travel";
+mongoose.connect(url, {useNewUrlParser: true});
 
 
 
