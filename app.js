@@ -64,7 +64,17 @@ app.use("/cities", cityRoutes);
 app.use("/cities/:id/comments", commentRoutes);
 
 
-
+//FOR RUNNING LOCALLY DO AS FOLLOWS:
+//====================
+// Comment out this:
+//====================
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("rfTravel server has started!")
 });
+//====================
+//UnComment this:
+//====================
+// var port = process.env.PORT || 3000;
+// app.listen(port, function () {
+//     console.log("rfTravel server has started!");
+// });
